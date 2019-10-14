@@ -1,0 +1,97 @@
+# Выделяем согласные и гласные; гласные выделяются в трёх рядах звучания: передний, средний и задний.
+define Consonant b | c | d | f | g | h | j | k | l | m | n | p | q | r | s | t | v | w | x | z ;
+define FrontVowel ä | ö | y ;
+define NeutralVowel e | i ;
+define BackVowel a | o | u ;
+define Vowel FrontVowel | NeutralVowel | BackVowel | A | E;
+define Letter Vowel | Consonant;
+
+# Определяем падежи и число слов, которые могут состоять из вышеуказанных букв
+define Case "+Nom" | "+Gen" | "+Part" | "+In" | "+All" | "+El" | "+Ad" | "+Abl" | "+Ill" ;
+define Number "+Sg" | "+Pl" ; 
+
+# Указываем состав корня слова
+define FrontStem [Consonant* [ FrontVowel | NeutralVowel ] ]+ Consonant*;
+define BackStem [Consonant* [ BackVowel | NeutralVowel ] ]* [Consonant* BackVowel] [Consonant* [ BackVowel | NeutralVowel ] ]* Consonant*;
+define Stem Letter+;
+
+define Input Stem Number Case;
+
+# Устанавливаем окончания для слов в именительном падеже
+define NomPl "+Pl" "+Nom" -> "^" t || _ ;
+define NomSg "+Sg" "+Nom" -> "^" || _ ;
+define Nominatives NomPl .o. NomSg ;
+
+# Определяем параметры, по которым должен работать родительный падеж
+define GenDen "+Gen" -> d e n || Vowel Vowel "+Pl" _ ;
+define Gen "+Gen" -> E n || _ ;
+define Genetive GenDen .o. Gen ;
+
+# Устанавливаем окончания для Партитива
+define PartTa "+Part" -> t A || [ Consonant Vowel Vowel | Consonant ] Number _ ;
+define PartA "+Part" -> A || _ ;
+
+# Устанавливаем окончания для локативных падежей
+define Ill1 "+Ill" -> a n || a _ ;
+define Ill2 "+Ill" -> o n || o _ ;
+define Ill3 "+Ill" -> e n || e _ ;
+define Ill4 "+Ill" -> u n || u _ ;
+define Ill5 "+Ill" -> y n || y _ ;
+define Ill6 "+Ill" -> i n || i _ ;
+define Ill7 "+Ill" -> ä n || ä _ ;
+define Ill8 "+Ill" -> ö n || ö _ ;
+
+define Ill9 "+Ill" -> a n || a h _ ;
+define Ill10 "+Ill" -> o n || o h _ ;
+define Ill11 "+Ill" -> e n || e h _ ;
+define Ill12 "+Ill" -> u n || u h _ ;
+define Ill13 "+Ill" -> y n || y h _ ;
+define Ill14 "+Ill" -> i n || i h _ ;
+define Ill15 "+Ill" -> ä n || ä h _ ;
+define Ill16 "+Ill" -> ö n || ö h _ ;
+
+define Ill Ill1 .o. Ill2 .o. Ill3 .o. Ill4 .o. Ill5 .o. Ill6 .o. Ill7 .o. Ill8 .o. Ill9 .o. Ill10 .o. Ill11 .o. Ill12 .o. Ill13 .o. Ill14 .o.  Ill15 .o. Ill16 ;
+
+define LocativeCases "+In" -> s s A , "+All" -> l l E || _ , "+El" -> s t A || _ , "+Ad" -> l l A || _ , "+Abl" -> l t A || _ , "+Ill" -> [ a | o | y | e | i | ä | u | ö ] n || [ [ a | o | y | e | i | ä | u | ö |] h ] _ ;
+
+define OtherCases PartTa .o. PartA .o. LocativeCases ;
+
+# Проверяем случаи с удалением звуков
+define Sg "+Sg" -> "^" || _ ;
+define OmitA ä -> 0, i -> 0 || _ "+Pl";
+define Ai2Oi a -> o || [ a | e | i ] Vowel* Consonant+ _ "+Pl";
+define Ai2i a -> 0 || [ o | u ] Vowel* Consonant+ _ "+Pl";
+define OmitFirst Vowel -> 0 || _ Vowel "+Pl" Consonant;
+define Pl "+Pl" -> "^" i || _ ;
+
+define NumberInfl Sg .o. OmitA .o. Ai2i .o. Ai2Oi .o. OmitFirst .o. Pl ;
+
+
+# Задаём свойства сингармонизма
+define JotPl i -> j || Vowel "^"* _ "^"* Vowel ;
+define HarmonyBack A -> a || BackStem "^" Letter* _;
+define HarmonyFront A -> ä || FrontStem "^" Letter* _;
+
+define Phonetics JotPl .o. HarmonyBack .o. HarmonyFront ;
+
+# Задаём чередования основы
+define DoublePTK p p -> p , t t -> t , k k -> k || Letter _ "^"* Vowel "^"* Consonant [ .#. | Consonant ] ;
+define SingleP p -> v || Vowel _ "^"* Vowel "^"* Consonant [ .#. | Consonant ] ;
+define SingleTK t -> d , k -> 0 || Letter _ "^"* Vowel "^"* Consonant [ .#. | Consonant ] ; 
+define TwoLetter m p -> m m , n t -> n n , n k -> n g , l t -> l l , r t -> r r || Letter _ "^"* Vowel "^"* Consonant [ .#. | Consonant ] ;
+define ThreeLetter l k e -> l j e , r k e -> r j e , h k e -> h j e , u k u -> u v u || Letter _ "^"* Consonant [ .#. | Consonant ] ;
+define N2M i n -> i m , t ö n -> t t ö m || _ "^" Vowel;
+define EOmit E -> 0 || Vowel "^" _;
+define EReal E -> e || _;
+
+define Alternations N2M  .o. EOmit .o. EReal .o. ThreeLetter .o. TwoLetter .o. SingleP .o. SingleTK .o. DoublePTK ;
+
+# Устанавливаем аффиксы для всех падежей
+define Affixes Nominatives .o. Genetive .o. OtherCases .o. NumberInfl .o. Alternations .o. Phonetics;
+
+# подчищаем нули
+define Cleanup "^" -> 0 || _ ;
+
+# Вводим аффиксы в грамматику
+define Grammar Input .o. Affixes .o. Cleanup ;
+push Grammar
