@@ -1,0 +1,480 @@
+foma[0]: source finnish_noun.foma
+Opening file 'finnish_noun.foma'.
+defined Consonant: 783 bytes. 2 states, 20 arcs, 20 paths.
+defined FrontVowel: 275 bytes. 2 states, 3 arcs, 3 paths.
+defined NeutralVowel: 243 bytes. 2 states, 2 arcs, 2 paths.
+defined BackVowel: 273 bytes. 2 states, 3 arcs, 3 paths.
+defined Vowel: 485 bytes. 2 states, 10 arcs, 10 paths.
+defined Letter: 1.1 kB. 2 states, 30 arcs, 30 paths.
+defined Case: 478 bytes. 2 states, 9 arcs, 9 paths.
+defined Number: 247 bytes. 2 states, 2 arcs, 2 paths.
+defined FrontStem: 1.3 kB. 2 states, 50 arcs, Cyclic.
+defined BackStem: 1.3 kB. 2 states, 50 arcs, Cyclic.
+defined Stem: 1.5 kB. 2 states, 60 arcs, Cyclic.
+defined Input: 1.9 kB. 4 states, 71 arcs, Cyclic.
+defined NomPl: 483 bytes. 3 states, 12 arcs, Cyclic.
+defined NomSg: 437 bytes. 3 states, 10 arcs, Cyclic.
+defined Nominatives: 579 bytes. 4 states, 17 arcs, Cyclic.
+defined GenDen: 1.4 kB. 6 states, 62 arcs, Cyclic.
+defined Gen: 355 bytes. 2 states, 5 arcs, Cyclic.
+defined Genetive: 1.4 kB. 6 states, 62 arcs, Cyclic.
+defined PartTa: 3.4 kB. 6 states, 171 arcs, Cyclic.
+defined PartA: 310 bytes. 1 state, 3 arcs, Cyclic.
+defined LocativeCases: 1.1 kB. 8 states, 37 arcs, Cyclic.
+defined OtherCases: 4.7 kB. 12 states, 252 arcs, Cyclic.
+defined Sg: 308 bytes. 1 state, 3 arcs, Cyclic.
+defined OmitA: 467 bytes. 3 states, 12 arcs, Cyclic.
+defined Ai2Oi: 2.7 kB. 5 states, 129 arcs, Cyclic.
+defined Ai2i: 2.7 kB. 5 states, 129 arcs, Cyclic.
+defined OmitFirst: 3.4 kB. 7 states, 179 arcs, Cyclic.
+defined Pl: 354 bytes. 2 states, 5 arcs, Cyclic.
+defined NumberInfl: 13.2 kB. 32 states, 803 arcs, Cyclic.
+defined JotPl: 1.0 kB. 4 states, 42 arcs, Cyclic.
+defined HarmonyBack: 2.7 kB. 4 states, 128 arcs, Cyclic.
+defined HarmonyFront: 2.7 kB. 4 states, 128 arcs, Cyclic.
+defined Phonetics: 14.6 kB. 36 states, 891 arcs, Cyclic.
+defined DoublePTK: 8.1 kB. 18 states, 474 arcs, Cyclic.
+defined SingleP: 4.4 kB. 10 states, 238 arcs, Cyclic.
+defined SingleTK: 5.0 kB. 11 states, 276 arcs, Cyclic.
+defined TwoLetter: 7.9 kB. 18 states, 463 arcs, Cyclic.
+defined ThreeLetter: 6.9 kB. 17 states, 400 arcs, Cyclic.
+defined N2M: 1.9 kB. 10 states, 95 arcs, Cyclic.
+defined EOmit: 962 bytes. 3 states, 36 arcs, Cyclic.
+defined EReal: 306 bytes. 1 state, 3 arcs, Cyclic.
+defined Alternations: 35.0 kB. 96 states, 2199 arcs, Cyclic.
+defined Affixes: 3.0 MB. 5098 states, 194838 arcs, Cyclic.
+defined Cleanup: 276 bytes. 1 state, 2 arcs, Cyclic.
+defined Grammar: 226.4 kB. 617 states, 14437 arcs, Cyclic.
+226.4 kB. 617 states, 14437 arcs, Cyclic.
+foma[1]: push Grammar
+226.4 kB. 617 states, 14437 arcs, Cyclic.
+foma[2]: down
+apply down> talo+Sg+Nom
+talo
+apply down> talo+Pl+Nom
+talot
+apply down> talo+Sg+Gen
+talon
+apply down> talo+Pl+Gen
+talojen
+apply down> talo+Sg+Part
+taloa
+apply down> talo+Pl+Part
+taloja
+apply down> talo+Sg+In
+talossa
+apply down> talo+Pl+In
+taloissa
+apply down> talo+Pl+All
+taloille
+apply down> talo+Sg+All
+talolle
+apply down> talo+Sg+Ad
+talolla
+apply down> talo+Pl+Ad
+taloilla
+apply down> talo+Sg+El
+talosta
+apply down> talo+Pl+El
+taloista
+apply down> talo+Sg+Abl
+talolta
+apply down> talo+Pl+Abl
+taloilta
+apply down> talo+Sg+Ill
+taloen
+taloan
+taloin
+taloon
+taloun
+taloyn
+taloän
+taloön
+talon
+apply down> talo+Pl+Ill
+talojen
+talojan
+talojin
+talojon
+talojun
+talojyn
+talojän
+talojön
+apply down>
+apply down> elämä+Sg+Nom
+elämä
+apply down> elämä+Pl+Nom
+elämät
+apply down> elämä+Sg+Gen
+elämän
+apply down> elämä+Pl+Gen
+elämien
+apply down> elämä+Sg+Part
+elämää
+apply down> elämä+Pl+Part
+elämiä
+apply down> elämä+Sg+In
+elämässä
+apply down> elämä+Pl+In
+elämissä
+apply down> elämä+Pl+In
+elämissä
+apply down> elämä+Pl+All
+elämille
+apply down> elämä+Sg+All
+elämälle
+apply down> elämä+Sg+Ad
+elämällä
+apply down> elämä+Pl+Ad
+elämillä
+apply down> elämä+Sg+El
+elämästä
+apply down> elämä+Pl+El
+elämistä
+apply down> elämä+Sg+Abl
+elämältä
+apply down> elämä+Pl+Abl
+elämiltä
+apply down> elämä+Sg+Ill
+elämäen
+elämäan
+elämäin
+elämäon
+elämäun
+elämäyn
+elämään
+elämäön
+elämän
+apply down> elämä+Pl+Ill
+elämien
+elämian
+elämiin
+elämion
+elämiun
+elämiyn
+elämiän
+elämiön
+apply down>
+apply down> kuu+Sg+Nom
+kuu
+apply down> kuu+Pl+Nom
+kuut
+apply down> kuu+Sg+Gen
+kuun
+apply down> kuu+Pl+Gen
+kuiden
+apply down> kuu+Sg+Part
+kuuta
+apply down> kuu+Pl+Part
+kuita
+apply down> kuu+Sg+In
+kuussa
+apply down> kuu+Pl+In
+kuissa
+apply down> kuu+Pl+All
+kuille
+apply down> kuu+Sg+All
+kuulle
+apply down> kuu+Sg+Ad
+kuulla
+apply down> kuu+Pl+Ad
+kuilla
+apply down> kuu+Sg+El
+kuusta
+apply down> kuu+Pl+El
+kuista
+apply down> kuu+Sg+Abl
+kuulta
+apply down> kuu+Pl+Abl
+kuilta
+apply down> kuu+Sg+Ill
+kuuen
+kuuan
+kuuin
+kuuon
+kuuun
+kuuyn
+kuuän
+kuuön
+kuun
+apply down> kuu+Pl+Ill
+kuujen
+kuujan
+kuujin
+kuujon
+kuujun
+kuujyn
+kuujän
+kuujön
+apply down>
+apply down> työ+Sg+Nom
+työ
+apply down> työ+Pl+Nom
+työt
+apply down> työ+Sg+Gen
+työn
+apply down> työ+Pl+Gen
+töiden
+apply down> työ+Sg+Part
+työtä
+apply down> työ+Pl+Part
+töitä
+apply down> työ+Sg+In
+työssä
+apply down> työ+Pl+In
+töissä
+apply down> työ+Pl+All
+töille
+apply down> työ+Sg+All
+työlle
+apply down> työ+Sg+Ad
+työllä
+apply down> työ+Pl+Ad
+töillä
+apply down> työ+Sg+El
+työstä
+apply down> työ+Pl+El
+töistä
+apply down> työ+Sg+Abl
+työltä
+apply down> työ+Pl+Abl
+töiltä
+apply down> työ+Sg+Ill
+työen
+työan
+työin
+työon
+työun
+työyn
+työän
+työön
+työn
+apply down> työ+Pl+Ill
+työjen
+työjan
+työjin
+työjon
+työjun
+työjyn
+työjän
+työjön
+apply down>
+apply down> sukka+Sg+Nom
+sukka
+apply down> sukka+Pl+Nom
+sukat
+apply down> sukka+Sg+Gen
+sukan
+apply down> sukka+Pl+Gen
+sukkien
+apply down> sukka+Sg+Part
+sukkaa
+apply down> sukka+Pl+Part
+sukkia
+apply down> sukka+Sg+In
+sukassa
+apply down> sukka+Pl+In
+sukissa
+apply down> sukka+Pl+All
+sukille
+apply down> sukka+Sg+All
+sukalle
+apply down> sukka+Sg+Ad
+sukalla
+apply down> sukka+Pl+Ad
+sukilla
+apply down> sukka+Sg+El
+sukasta
+apply down> sukka+Pl+El
+sukista
+apply down> sukka+Sg+Abl
+sukalta
+apply down> sukka+Pl+Abl
+sukilta
+apply down> sukka+Sg+Ill
+sukkaen
+sukkaan
+sukkain
+sukkaon
+sukkaun
+sukkayn
+sukkaän
+sukkaön
+sukan
+apply down> sukka+Pl+Ill
+sukkien
+sukkian
+sukkiin
+sukkion
+sukkiun
+sukkiyn
+sukkiän
+sukkiön
+apply down>
+apply down> poika+Sg+Nom
+poika
+apply down> poika+Pl+Nom
+pojat
+apply down> poika+Sg+Gen
+pojan
+apply down> poika+Pl+Gen
+poikien
+apply down> poika+Sg+Part
+poikaa
+apply down> poika+Pl+Part
+poikia
+apply down> poika+Sg+In
+pojassa
+apply down> poika+Pl+In
+pojissa
+apply down> poika+Pl+All
+pojille
+apply down> poika+Sg+All
+pojalle
+apply down> poika+Sg+Ad
+pojalla
+apply down> poika+Pl+Ad
+pojilla
+apply down> poika+Sg+El
+pojasta
+apply down> poika+Pl+El
+pojista
+apply down> poika+Sg+Abl
+pojalta
+apply down> poika+Pl+Abl
+pojilta
+apply down> poika+Sg+Ill
+poikaen
+poikaan
+poikain
+poikaon
+poikaun
+poikayn
+poikaän
+poikaön
+pojan
+apply down> poika+Pl+Ill
+poikien
+poikian
+poikiin
+poikion
+poikiun
+poikiyn
+poikiän
+poikiön
+apply down>
+apply down> kaappi+Pl+In
+kaapissa
+apply down> matto+Pl+All
+mattoille
+apply down> kukka+Sg+Gen
+kukan
+apply down>
+apply down> tupa+Sg+In
+tuvassa
+apply down> katu+Sg+All
+kadulle
+apply down> vihta+Sg+All
+vihdalle
+apply down> poika+Sg+All
+pojalle
+apply down> jalka+Sg+Gen
+jalan
+apply down> tupa+Pl+All
+tuville
+apply down> tupa+Sg+All
+tuvalle
+apply down> tupa+Sg+Ad
+tuvalla
+apply down> tupa+Pl+Ad
+tuvilla
+apply down> tupa+Sg+El
+tuvasta
+apply down> tupa+Pl+El
+tuvista
+apply down> tupa+Sg+Abl
+tuvalta
+apply down> tupa+Pl+Abl
+tuvilta
+apply down> tupa+Sg+Ill
+tupaen
+tupaan
+tupain
+tupaon
+tupaun
+tupayn
+tupaän
+tupaön
+tuvan
+apply down> tupa+Pl+Ill
+tupien
+tupian
+tupiin
+tupion
+tupiun
+tupiyn
+tupiän
+tupiön
+apply down>
+apply down> matka+Pl+In
+matkoissa
+apply down> kirja+Pl+Part
+kirjoja
+apply down> piha+Pl+All
+pihoille
+apply down> herra+Pl+Gen
+herrojen
+apply down>
+apply down> koira+Pl+Gen
+koirien
+apply down> poika+Pl+All
+pojille
+apply down> muna+Pl+Part
+munia
+apply down> kuuma+Pl+In
+kuumissa
+apply down>
+apply down> kampa+Sg+All
+kammalle
+apply down> kenkä+Pl+Nom
+kengät
+apply down> ilta+Sg+All
+illalle
+apply down> kerta+Sg+Gen
+kerran
+apply down> suku+Sg+In
+suvussa
+apply down>
+apply down> puu+Pl+Part
+puita
+apply down> tie+Pl+All
+teille
+apply down>
+apply down> avain+Sg+Nom
+avain
+apply down> avain+Sg+Part
+avainta
+apply down> avain+Sg+Gen
+avaimen
+apply down> avain+Pl+In
+avaimissa
+apply down> avain+Sg+All
+avainlle
+apply down> avain+Sg+Abl
+avainlta
+apply down> avain+Sg+El
+avainsta
+apply down> avain+Pl+In
+avaimissa
+apply down> avain+Sg+Ad
+avainlla
+apply down>
+apply down> työtön+Sg+Nom
+työtön
+apply down> työtön+Sg+Part
+työtöntä
+apply down> työtön+Sg+Gen
+työttömen
+apply down> työtön+Pl+In
+työttömissä
+apply down>
